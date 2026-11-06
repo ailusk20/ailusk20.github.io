@@ -1,0 +1,102 @@
+/* ---------- Easy-to-change settings ---------- */
+:root {
+  --bg: #fafaf7;        /* page background */
+  --text: #151515;      /* main text color */
+  --accent: #ff4d2e;    /* highlight color: change this to make it yours */
+  --muted: #6b6b6b;     /* softer gray text */
+  --max-width: 1000px;  /* how wide the content gets */
+}
+
+/* ---------- Basics ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); }
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+.logo {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: var(--text);
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--text);
+}
+nav a:hover { color: var(--accent); }
+
+/* ---------- Sections ---------- */
+main section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+/* ---------- Hero ---------- */
+.hero { padding-top: 90px; }
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.1;
+  margin: 16px 0;
+}
+.lead { color: var(--muted); font-size: 1.2rem; margin-bottom: 28px; }
+.button {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.button:hover { opacity: 0.85; }
+
+/* ---------- Work grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.card h3 { margin: 12px 0 4px; }
+.card p { color: var(--muted); }
+.thumb {
+  background: #e6e6e0;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
